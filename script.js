@@ -201,3 +201,17 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // };
 
 // checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+
+/////////////////////////////////////////////////
+
+//DATA TRANSFORMATIONS: MAP, FILTER, REDUCE
+
+//Map method returns a new array containing the results of applying an operation on all original array elements.
+
+//Filter method returns a new array containing the array elements that passed a specific test condition
+
+//Reduce method boils (reduces) all array elements down to one single value (e.g adding all elements together)
+
+/////////////////////////////////////////////////
+
+//THE MAP METHOD
