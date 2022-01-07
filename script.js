@@ -474,25 +474,52 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-//SOME AND EVERY
-console.log(movements);
-//Equality
-console.log(movements.includes(-130));
+// //SOME AND EVERY
+// console.log(movements);
+// //Equality
+// console.log(movements.includes(-130));
 
-//SOME: Condition
-console.log(movements.some(mov => mov === -130));
+// //SOME: Condition
+// console.log(movements.some(mov => mov === -130));
 
-const anyDeposits = movements.some(mov => mov > 0);
-console.log(anyDeposits);
+// const anyDeposits = movements.some(mov => mov > 0);
+// console.log(anyDeposits);
 
-//EVERY method
-console.log(movements.every(mov => mov > 0));
-console.log(account4.movements.every(mov => mov > 0));
+// //EVERY method
+// console.log(movements.every(mov => mov > 0));
+// console.log(account4.movements.every(mov => mov > 0));
 
-//Separate Callback
-const deposit = mov => mov > 0;
-console.log(movements.some(deposit));
-console.log(movements.every(deposit));
-console.log(movements.filter(deposit));
+// //Separate Callback
+// const deposit = mov => mov > 0;
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
 
 /////////////////////////////////////////////////
+
+// //FLAT AND FLATMAP
+// const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+// console.log(arr.flat());
+
+// const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+// console.log(arrDeep.flat(2)); //The number 2 indicates that it goes 2 levels deep to flat the array
+
+// // const accountMovements = accounts.map(acc => acc.movements);
+// // console.log(accountMovements);
+// // const allMovements = accountMovements.flat();
+// // console.log(allMovements);
+// // const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// // console.log(overalBalance);
+
+// //We can write all this with chaining method
+// const overalBalance = accounts
+//   .map(acc => acc.movements)
+//   .flat()
+//   .reduce((acc, mov) => acc + mov, 0);
+// console.log(overalBalance);
+
+// //Flatmap
+// const overalBalance2 = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((acc, mov) => acc + mov, 0);
+// console.log(overalBalance2);
