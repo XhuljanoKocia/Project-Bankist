@@ -536,35 +536,67 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-//SORTING ARRAYS
-const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
-console.log(owners.sort()); //Orders the array into alphabetical order but changes the original array as well.
-console.log(owners);
+// //SORTING ARRAYS
+// const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+// console.log(owners.sort()); //Orders the array into alphabetical order but changes the original array as well.
+// console.log(owners);
 
-//Numbers
-console.log(movements);
-console.log(movements.sort()); //It doesn't work on numbers since the sort method sorts them as strings
+// //Numbers
+// console.log(movements);
+// console.log(movements.sort()); //It doesn't work on numbers since the sort method sorts them as strings
 
-//return < 0, Place A before B
-//return > 0, Place B before A
-//Ascending
-// movements.sort((a, b) => {
-//   if (a > b) return 1;
-//   if (b > a) return -1;
+// //return < 0, Place A before B
+// //return > 0, Place B before A
+// //Ascending
+// // movements.sort((a, b) => {
+// //   if (a > b) return 1;
+// //   if (b > a) return -1;
+// // });
+
+// //Writing the above function in a shorter way
+// movements.sort((a, b) => a - b);
+
+// console.log(movements);
+
+// //Descending
+// // movements.sort((a, b) => {
+// //   if (a > b) return -1;
+// //   if (b > a) return 1;
+// // });
+
+// //Writing the above function in a shorter way
+// movements.sort((a, b) => b - a);
+
+// console.log(movements);
+
+/////////////////////////////////////////////////
+
+// //MORE WAYS OF CREATING AND FILLING ARRAYS
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+// const x = new Array(7); //This creates a new array with 7 empty values
+// console.log(x);
+
+// //console.log(x.fill(1)); //Fills the entire array with 1
+// //console.log(x.fill(1, 3)); //Fills the array with 1 after the 3rd index
+// console.log(x.fill(1, 3, 5)); //Fills the array with 1 through index 3-5 without including index number 5
+
+// console.log(arr.fill(23, 4, 6));
+
+// //Array.from
+// const y = Array.from({ length: 7 }, () => 1);
+// console.log(y);
+
+// const z = Array.from({ length: 7 }, (curr, i) => i + 1);
+// console.log(z);
+
+// labelBalance.addEventListener('click', function () {
+//   const movementsUI = Array.from(
+//     document.querySelectorAll('.movements__value'),
+//     el => Number(el.textContent.replace('€', ''))
+//   );
+//   console.log(movementsUI);
 // });
 
-//Writing the above function in a shorter way
-movements.sort((a, b) => a - b);
-
-console.log(movements);
-
-//Descending
-// movements.sort((a, b) => {
-//   if (a > b) return -1;
-//   if (b > a) return 1;
-// });
-
-//Writing the above function in a shorter way
-movements.sort((a, b) => b - a);
-
-console.log(movements);
+/////////////////////////////////////////////////
