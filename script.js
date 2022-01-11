@@ -61,9 +61,12 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
-  movements.forEach(function (mov, i) {
+
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
       <div class="movements__row">
@@ -205,6 +208,13 @@ btnClose.addEventListener('click', function (e) {
     containerApp.style.opacity = 0;
   }
   inputCloseUsername.value = inputClosePin.value = '';
+});
+
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
 
 /////////////////////////////////////////////////
@@ -523,3 +533,146 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //   .flatMap(acc => acc.movements)
 //   .reduce((acc, mov) => acc + mov, 0);
 // console.log(overalBalance2);
+
+/////////////////////////////////////////////////
+
+// //SORTING ARRAYS
+<<<<<<< HEAD
+
+// //Strings
+// const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+// console.log(owners.sort());
+
+// //Numbers
+// console.log(movements);
+// //console.log(movements.sort()); //Sort method converts everything to string and then sorts them.
+
+// //return < 0, A will be before B
+// //return > 0, B will be before A
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+// });
+=======
+// const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+// console.log(owners.sort()); //Orders the array into alphabetical order but changes the original array as well.
+// console.log(owners);
+
+// //Numbers
+// console.log(movements);
+// console.log(movements.sort()); //It doesn't work on numbers since the sort method sorts them as strings
+
+// //return < 0, Place A before B
+// //return > 0, Place B before A
+// //Ascending
+// // movements.sort((a, b) => {
+// //   if (a > b) return 1;
+// //   if (b > a) return -1;
+// // });
+
+// //Writing the above function in a shorter way
+// movements.sort((a, b) => a - b);
+
+// console.log(movements);
+
+// //Descending
+// // movements.sort((a, b) => {
+// //   if (a > b) return -1;
+// //   if (b > a) return 1;
+// // });
+
+// //Writing the above function in a shorter way
+// movements.sort((a, b) => b - a);
+>>>>>>> 474c8acff59673973653652fb4129a93f93229a2
+
+// console.log(movements);
+
+/////////////////////////////////////////////////
+
+<<<<<<< HEAD
+// //Array Methods Practice
+
+// // 1.
+// const bankDepositSum = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov > 0)
+//   .reduce((sum, cur) => sum + cur, 0);
+
+// console.log(bankDepositSum);
+
+// // 2.
+// // const numDeposits1000 = accounts
+// //   .flatMap(acc => acc.movements)
+// //   .filter(mov => mov >= 1000).length;
+
+// //How to get the same result using reduce method
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+
+// console.log(numDeposits1000);
+
+// // 3.
+// const sums = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce(
+//     (sums, cur) => {
+//       // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+//       // Writing in a different way
+//       sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+//       return sums;
+//     },
+//     { deposits: 0, withdrawals: 0 }
+//   );
+
+// console.log(sums);
+
+// // 4.
+// // this is a nice title -> This Is a Nice Title
+// const converTitleCase = function (title) {
+//   const capitalize = str => str[0].toUpperCase() + str.slice(1);
+
+//   const exeptions = ['a', 'an', 'the', 'and', 'but', 'or', 'on', 'in', 'with'];
+
+//   const titleCase = title
+//     .toLowerCase()
+//     .split(' ')
+//     .map(word => (exeptions.includes(word) ? word : capitalize(word)))
+//     .join(' ');
+//   return capitalize(titleCase);
+// };
+
+// console.log(converTitleCase('this is a nice title'));
+// console.log(converTitleCase('this is a LONG title but not too long'));
+// console.log(converTitleCase('and here is another title with an EXAMPLE'));
+=======
+// //MORE WAYS OF CREATING AND FILLING ARRAYS
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+// const x = new Array(7); //This creates a new array with 7 empty values
+// console.log(x);
+
+// //console.log(x.fill(1)); //Fills the entire array with 1
+// //console.log(x.fill(1, 3)); //Fills the array with 1 after the 3rd index
+// console.log(x.fill(1, 3, 5)); //Fills the array with 1 through index 3-5 without including index number 5
+
+// console.log(arr.fill(23, 4, 6));
+
+// //Array.from
+// const y = Array.from({ length: 7 }, () => 1);
+// console.log(y);
+
+// const z = Array.from({ length: 7 }, (curr, i) => i + 1);
+// console.log(z);
+
+// labelBalance.addEventListener('click', function () {
+//   const movementsUI = Array.from(
+//     document.querySelectorAll('.movements__value'),
+//     el => Number(el.textContent.replace('€', ''))
+//   );
+//   console.log(movementsUI);
+// });
+
+/////////////////////////////////////////////////
+>>>>>>> 474c8acff59673973653652fb4129a93f93229a2
