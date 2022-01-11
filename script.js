@@ -537,7 +537,6 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 
 // //SORTING ARRAYS
-<<<<<<< HEAD
 
 // //Strings
 // const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
@@ -553,7 +552,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //   if (a > b) return 1;
 //   if (b > a) return -1;
 // });
-=======
+
 // const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
 // console.log(owners.sort()); //Orders the array into alphabetical order but changes the original array as well.
 // console.log(owners);
@@ -583,13 +582,11 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // //Writing the above function in a shorter way
 // movements.sort((a, b) => b - a);
->>>>>>> 474c8acff59673973653652fb4129a93f93229a2
 
 // console.log(movements);
 
 /////////////////////////////////////////////////
 
-<<<<<<< HEAD
 // //Array Methods Practice
 
 // // 1.
@@ -645,7 +642,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(converTitleCase('this is a nice title'));
 // console.log(converTitleCase('this is a LONG title but not too long'));
 // console.log(converTitleCase('and here is another title with an EXAMPLE'));
-=======
+
 // //MORE WAYS OF CREATING AND FILLING ARRAYS
 // const arr = [1, 2, 3, 4, 5, 6, 7];
 // console.log(new Array(1, 2, 3, 4, 5, 6, 7));
@@ -675,4 +672,3 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // });
 
 /////////////////////////////////////////////////
->>>>>>> 474c8acff59673973653652fb4129a93f93229a2
